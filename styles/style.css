@@ -1,0 +1,227 @@
+/* ******************************** */
+/* Default Properties */
+/* ******************************** */
+
+/* penanda nav */
+
+#mobile-menu-button.open span:first-child {
+  transform: translateY(8px) rotate(45deg);
+}
+#mobile-menu-button.open span:nth-child(2) {
+  opacity: 0;
+}
+#mobile-menu-button.open span:last-child {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Gaya untuk menu aktif */
+.active {
+  background-color: rgba(16, 185, 129, 0.5); /* Warna hijau dari Tailwind (emerald-500) dengan opacity 50% */
+  color: white !important;
+}
+
+/* Gaya hover untuk semua menu */
+#menu a:hover {
+  background-color: rgba(16, 185, 129, 0.3); /* Warna hijau yang sedikit lebih terang saat hover */
+  color: white !important;
+}
+
+/* Gaya khusus untuk menu yang tidak aktif */
+#menu a:not(.active) {
+  color: #d1d5db; /* gray-300 di Tailwind */
+}
+
+/* Efek transisi untuk semua menu */
+#menu a {
+  transition: background-color 0.5s, color 0.5s;
+}
+/* --- 01 Fonts
+  - font-family: 'Roboto Slab', serif; 
+*/
+/*font walcom*/
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+/* --- 02 COLORS
+
+  text-primary-colors: #3cba54 and shades of it
+  Primary:  #1877F2 
+  
+*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ************************************** */
+/* changing whole websites scrollbar */
+/* ************************************** */
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #021227;
+  border-radius: 10px;
+  color: #021227;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #3cba54;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #3cba5399;
+}
+
+/* ************************************** */
+/* featured project section */
+/* ************************************** */
+
+.featured-project-img-01 {
+  background-image: linear-gradient(to bottom,
+      rgba(25, 254, 67, 0),
+      rgba(25, 254, 67, 0));
+
+  transition: background-image 0.5s;
+
+  position: relative;
+
+  color: #ffffff78;
+}
+
+.featured-project-img-01::before {
+  content: "";
+  width: 100%;
+  /* height: 100%; */
+  display: block;
+
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+
+  background-image: linear-gradient(to bottom,
+      rgba(2, 22, 49, 0.5),
+      rgba(2, 22, 48, 0.5));
+
+  /* background-image: linear-gradient(
+    to bottom,
+    rgba(25, 254, 67, 0.1),
+    rgba(25, 254, 67, 0.1)
+  ); */
+  transition: width 1s ease-in-out;
+}
+
+.featured-project-img-01:hover:before {
+  /* height: 0%; */
+  width: 0%;
+}
+
+/* ************************************** */
+/* hiding scrollbar of img */
+/* ************************************** */
+
+.featured-project-img-01-div::-webkit-scrollbar {
+  display: none;
+}
+
+.featured-project-img-01-div {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+/* ************************************** */
+/* mentions projects */
+/* ************************************** */
+
+.mentions-project:hover .mentions-project-img {
+  display: none;
+}
+
+.mentions-project:hover .mentions-project-div {
+  display: block;
+}
+
+.mentions-project {
+  background-image: linear-gradient(to bottom,
+      rgba(25, 254, 67, 0),
+      rgba(25, 254, 67, 0));
+
+  transition: background-image 0.5s;
+
+  position: relative;
+}
+
+.mentions-project::after {
+  content: "";
+
+  display: block;
+
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+
+  background-image: linear-gradient(to bottom,
+      rgba(2, 22, 49, 0.5),
+      rgba(2, 22, 48, 0.5));
+
+  /* background-image: linear-gradient(to bottom, #021630a7, #021630a7); */
+  /* background-image: linear-gradient(
+    to bottom,
+    rgba(25, 254, 67, 0.1),
+    rgba(25, 254, 67, 0.1)
+  ); */
+  transition: width 1s ease-in-out;
+}
+
+.mentions-project:hover:after {
+  /* height: 0%; */
+  width: 0%;
+}
+
+
+/* ************************************** */
+/* warna Judul the stack.... */
+/* ************************************** */
+@keyframes glow {
+
+  0%,
+  100% {
+    filter: drop-shadow(0 0 10px rgba(48, 149, 67, 0.8));
+  }
+
+  50% {
+    filter: drop-shadow(0 0 20px rgba(48, 149, 67, 0.6));
+  }
+}
+
+.drop-shadow-glow {
+  animation: glow 3s infinite;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  transition: transform 0.5s;
+  cursor: pointer;
+}
+
+.skill-item img {
+  filter: grayscale(30%);
+  transition: filter 0.5s, transform 0.5s;
+}
+
+.skill-item:hover img {
+  filter: grayscale(0%);
+}

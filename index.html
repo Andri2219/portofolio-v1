@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en" class="text-[14px] sm:text-[16px]">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="shortcut icon" href="./images/logweb.png" type="image/x-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+  <!-- ion icons link -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!-- Tailwind CSS CDN Link -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Daisy Ui Links -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="./styles/style.css">
+  <title>WebAdrs</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body style="font-family: Roboto, sans-serif;" class="bg-[#021227] text-[#cccccc]">
+  <!-- ********************************************** -->
+  <!-- Header Section Nav-->
+  <!-- ********************************************** -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-filter backdrop-blur-lg bg-black bg-opacity-50 transition-all duration-500">
+    <div class="container mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center">
+      <div class="flex justify-between w-full md:w-auto items-center">
+        <a href="#" class="text-white font-bold text-xl flex items-center">
+          <img src="./images/logweb.png" alt="hero-img" width="70">
+          <span style="font-family: 'Cinzel Decorative', cursive;">WELCOME</span>
+        </a>
+        <button id="mobile-menu-button" class="text-gray-300 hover:text-white focus:outline-none md:hidden flex flex-col items-center justify-center w-8 h-8">
+          <span class="block w-6 h-0.5 bg-current mb-1.5 transform transition-transform duration-300 ease-in-out"></span>
+          <span class="block w-6 h-0.5 bg-current mb-1.5"></span>
+          <span class="block w-6 h-0.5 bg-current transform transition-transform duration-300 ease-in-out"></span>
+        </button>
+      </div>
+      <div id="menu" class="hidden md:flex w-full md:w-auto mt-4 md:mt-0 flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 absolute md:static top-full left-0 right-0 bg-black bg-opacity-50 md:bg-transparent p-4 md:p-0">
+        <a id="about-link" href="#about" class="text-gray-300 hover:text-white transition duration-500 py-2 px-4 rounded-md flex items-center hover:bg-green-500/30 ease-in-out active">
+          <svg class="h-5 w-5 mr-2 fill-current" viewBox="0 0 24 24">
+            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+          </svg>
+          About me
+        </a>
+        <a id="projects-link" href="#projects" class="text-gray-300 hover:text-white transition duration-500 py-2 px-4 rounded-md flex items-center hover:bg-green-500/30 ease-in-out">
+          <svg class="h-5 w-5 mr-2 fill-current" viewBox="0 0 24 24">
+            <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z" />
+          </svg>
+          Projects
+        </a>
+        <a id="blogs-link" href="#blogs" class="text-gray-300 hover:text-white transition duration-500 py-2 px-4 rounded-md flex items-center hover:bg-green-500/30 ease-in-out">
+          <svg class="h-5 w-5 mr-2 fill-current" viewBox="0 0 24 24">
+            <path d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z" />
+          </svg>
+          Blogs
+        </a>
+        <a id="contact-link" href="#contact" class="text-gray-300 hover:text-white transition duration-500 py-2 px-4 rounded-md flex items-center hover:bg-green-500/30 ease-in-out">
+          <svg class="h-5 w-5 mr-2 fill-current" viewBox="0 0 24 24">
+            <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8l8 5 8-5v10z" />
+          </svg>
+          Contact
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ********************************************** -->
+  <!-- Hero Section -->
+  <!-- ********************************************** -->
+  <div class="h-10"></div>
+  <section
+    class="flex flex-col-reverse sm:flex-row sm:justify-between lg:min-h-screen bg-[#021227] px-8 sm:px-16 py-4 max-w-screen-xl mx-auto" id="about">
+    <!-- left side -->
+    <div class="sm:w-1/2 flex flex-col justify-center">
+      <p style="font-family: 'Roboto Mono', monospace;" class="text-[#309543] font-semibold">Hi, my name is</p>
+      <h2 class="text-2xl lg:text-5xl xl:text-6xl font-bold text-[#cccccc] mt-3 lg:mt-7 whitespace-nowrap">MOCH. ANDRI
+        SETIAWAN</h2>
+      <h2 class="text-3xl lg:text-4xl xl:text-5xl font-bold text-[#247032] mt-3 lg:mt-7">Front-End Developer.</h2>
+      <p class="mt-6 lg:mt-10 max-w-md text-[#cccccc]">
+        I am an active student majoring in Information Systems at Nusantara PGRI University, Kediri.<br>
+        Currently I am focusing on studying Full Stack Web Development. <br>
+        I loved to build products that can be used by millions of people. <br>
+        <span style="font-family: 'Roboto Mono', monospace;" class="font-bold text-[#309543]">Open for Work &
+          Collaboration.</span>
+      </p>
+      <div class="mt-12">
+        <a href="#skills" style="font-family: 'Roboto Mono', monospace;"
+          class="px-6 py-3 text-[#309543] border-2 border-[#309543] font-bold transition-all hover:bg-[#30954232] rounded-md">Check
+          out
+          My
+          Skills !</a>
+      </div>
+      <!-- social Links -->
+      <div class="mt-12">
+        <ul class="flex gap-4">
+          <li class="mr-2 flex justify-center items-center">
+            <a href="" target="_blank" class="w-[35px] h-[35px]">
+              <ion-icon name="logo-linkedin" class="w-[35px] h-[35px] transition-all hover:text-[#309543]"></ion-icon>
+            </a>
+          </li>
+          <li class="mr-2 flex justify-center items-center">
+            <a href="https://github.com/andri2299" target="_blank" class="w-[35px] h-[35px]">
+              <ion-icon name="logo-github" class="w-[35px] h-[35px] transition-all hover:text-[#309543]"></ion-icon>
+            </a>
+          </li>
+          <li class="mr-2 flex justify-center items-center">
+            <a href="" target="_blank" class="w-[35px] h-[35px]">
+              <ion-icon name="logo-twitter" class="w-[35px] h-[35px] transition-all hover:text-[#309543]"></ion-icon>
+            </a>
+          </li>
+          <li class="mr-2 flex justify-center items-center">
+            <a href="https://www.instagram.com/andrisetiawan2219/?hl=en" target="_blank" class="w-[35px] h-[35px]">
+              <ion-icon name="logo-instagram" class="w-[35px] h-[35px] transition-all hover:text-[#309543]"></ion-icon>
+            </a>
+          </li>
+          <li class="mr-2 flex justify-center items-center">
+            <a href="mailto: mochandrisetiawan2@gmail.com" target="_blank" class="w-[35px] h-[35px]">
+              <ion-icon name="mail" class="w-[35px] h-[35px] transition-all hover:text-[#309543]"></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- right side --><br>
+    <section>
+      <div class="sm:w-5/2 flex flex-col items-center space-y-8 hidden sm:flex">
+        <div class="mt-20"></div>
+        <article
+          class="w-64 bg-gray-800 shadow-2xl rounded-xl overflow-hidden transform hover:scale-105 transition duration-500 ease-in-out">
+          <div class="relative h-32">
+            <img src="./images/4.jpg" alt="profile"
+              class="absolute inset-0 w-full h-full object-cover object-top filter brightness-75 hover:brightness-100 transition duration-300">
+          </div>
+          <div class="p-4">
+            <h2 class="text-lg font-semibold flex items-center mb-1 text-gray-100">
+              Moch. Andri Setiawan
+              <img
+                src="https://img.freepik.com/free-vector/illustration-indonesia-flag_53876-27131.jpg?size=626&ext=jpg&ga=GA1.1.1448711260.1706918400&semt=ais"
+                alt="Indonesia Flag" class="w-4 ml-1">
+            </h2>
+            <p class="text-xs text-gray-300 mb-2">
+              Information Systems Student at
+              <a href="https://unpkediri.ac.id/" title="Google"
+                class="text-blue-400 hover:text-blue-300 transition duration-300">UNP Kediri</a>
+            </p>
+            <p class="text-xs text-gray-400 mb-1">Helping with:</p>
+            <ul class="flex flex-wrap gap-1 mb-3 text-xs">
+              <li class="px-2 py-0.5 bg-gray-700 rounded-full text-gray-300 hover:bg-gray-600 transition duration-300">
+                Front-End</li>
+              <li class="px-2 py-0.5 bg-gray-700 rounded-full text-gray-300 hover:bg-gray-600 transition duration-300">
+                Back-End</li>
+              <li class="px-2 py-0.5 bg-gray-700 rounded-full text-gray-300 hover:bg-gray-600 transition duration-300">
+                SQL</li>
+            </ul>
+            <div class="flex space-x-2 text-xs justify-center">
+              <a href="./images/cv_mochandrisetiawan.pdf" style="font-family: 'Roboto Mono', monospace;"
+                class="px-6 py-3 text-[#309543] border-2 border-[#309543] font-bold transition-all hover:bg-[#30954232] rounded-md ">Check
+                My
+                CV !</a>
+            </div>
+          </div>
+        </article>
+        <p id="typed-text" class="text-green-500 text-lg font-mono leading-relaxed whitespace-pre-wrap"></p>
+      </div>
+      </div>
+    </section>
+    </div>
+  </section>
+
+  <!-- ********************************************** -->
+  <!-- tech stack Section -->
+  <!-- ********************************************** -->
+
+  <section class="bg-gradient-to-br from-[#021227] to-[#032a50] px-8 sm:px-16 py-20 max-w-screen-xl mx-auto"
+    id="skills">
+    <div class="relative">
+      <!-- Background Elements -->
+      <div class="absolute inset-0 opacity-10 pointer-events-none">
+        <div class="absolute top-0 left-1/4 w-24 h-24 bg-[#309543] rounded-full filter blur-3xl"></div>
+        <div class="absolute bottom-0 right-1/3 w-32 h-32 bg-blue-500 rounded-full filter blur-3xl"></div>
+      </div>
+
+      <!-- Title -->
+      <div class="flex justify-center items-center gap-12 pb-16 relative z-10">
+        <div class="h-px flex-1 bg-gradient-to-r from-transparent via-[#309543] to-transparent hidden sm:block"></div>
+        <h2
+          class="text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-[#309543] to-blue-500 drop-shadow-glow">
+          Tech Stack</h2>
+        <div class="h-px flex-1 bg-gradient-to-r from-transparent via-[#309543] to-transparent hidden sm:block"></div>
+      </div>
+
+      <!-- Skills Grid -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-12 justify-center relative z-10"
+        style="font-family: 'Roboto Mono', monospace;">
+        <!-- Skill Items -->
+        <div class="skill-item" data-skill="HTML">
+          <img src="./images/icons8-html-5-96.svg" alt="html icon"
+            class="w-24 h-24 transition-transform duration-500 hover:scale-110">
+          <p class="font-semibold text-[#cccccc] mt-4 text-center opacity-0 transition-opacity duration-500">HTML</p>
+        </div>
+        <div class="skill-item" data-skill="CSS">
+          <img src="./images/icons8-css3-96.svg" alt="css icon"
+            class="w-24 h-24 transition-transform duration-500 hover:scale-110">
+          <p class="font-semibold text-[#cccccc] mt-4 text-center opacity-0 transition-opacity duration-500">CSS</p>
+        </div>
+        <div class="skill-item" data-skill="Tailwind CSS">
+          <img src="./images/tailwind-css.svg" alt="tailwind css icon"
+            class="w-24 h-24 transition-transform duration-500 hover:scale-110">
+          <p class="font-semibold text-[#cccccc] mt-4 text-center opacity-0 transition-opacity duration-500">Tailwind
+            CSS</p>
+        </div>
+        <div class="skill-item" data-skill="JavaScript">
+          <img src="./images/icons8-javascript-96.svg" alt="javascript icon"
+            class="w-24 h-24 transition-transform duration-500 hover:scale-110">
+          <p class="font-semibold text-[#cccccc] mt-4 text-center opacity-0 transition-opacity duration-500">JavaScript
+          </p>
+        </div>
+      </div>
+
+      <!-- Skill Description -->
+      <div class="mt-16 text-center">
+        <p id="skillDescription"
+          class="text-xl font-bold text-[#cccccc] opacity-0 transition-opacity duration-500 transform translate-y-4">
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ****************************************** -->
+  <!-- Some Things I’ve Built Section -->
+  <!-- ****************************************** -->
+
+  <section class="bg-[#021227] px-7 sm:px-14 py-16 max-w-screen-xl mx-auto" id="projects">
+    <!-- Title -->
+    <div class="flex justify-center items-center gap-12 pb-16 relative z-10">
+      <div class="h-px flex-1 bg-gradient-to-r from-transparent via-[#309543] to-transparent hidden sm:block"></div>
+      <h2
+        class="text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-[#309543] to-blue-500 drop-shadow-glow pb-2">
+        Some Things I’ve Built</h2>
+      <div class="h-px flex-1 bg-gradient-to-r from-transparent via-[#309543] to-transparent hidden sm:block"></div>
+    </div>
+
+
+    <!-- featured projects -->
+    <div>
+      <!-- featured project 01 -->
+      <div class="flex flex-col sm:flex-row sm:gap-12 mt-20">
+
+        <!-- left side -->
+        <div class="mockup-window border border-base-300 sm:w-1/2 h-[300px] order-2	sm:order-none">
+          <div class="featured-project-img-01-div cursor-all-scroll overflow-scroll h-[300px] rounded">
+            <div class="featured-project-img-01  transition-all	duration-500  ">
+              <img src="./images/banana.png" alt="BananaROLL" class="">
+            </div>
+          </div>
+        </div>
+
+        <!-- right side -->
+        <div class="sm:w-1/2 h-[300px] flex flex-col justify-center order-1 sm:order-none">
+          <h2 class="sm:text-end text-3xl font-bold mb-8 sm:relative sm:right-[10%] lg:right-1/4">01. BananaROLL
+          </h2>
+          <p
+            class="bg-[#051830] pl-8 pr-2 py-4 mb-2 rounded shadow-sm sm:relative sm:right-[10%] lg:right-1/4 text-[#ffffff78]">
+
+            MSME Profile Responsive Website, Food Ordering and Delivery, created using HTML5, CSS3 and JavaScript. <br>
+            <span class="text-[#309543] font-medium">This Site is Fully Responsive</span>
+          </p>
+          <div style="font-family: 'Roboto Mono', monospace;" class="sm:relative sm:right-[10%] lg:right-1/4">
+            <ul class="flex gap-4 sm:justify-end text-sm">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+            </ul>
+          </div>
+          <div class="flex gap-4 mt-2 sm:justify-end sm:relative sm:right-[10%] lg:right-1/4">
+            <a href="https://github.com/andri2299/umkm-bananaroll" target="_blank" class="w-9 h-9">
+              <ion-icon name="logo-github" class="w-8 h-8 transition-all hover:text-[#309543]"></ion-icon>
+            </a>
+            <a href="https://github.com/andri2299/umkm-bananaroll" target="_blank" class="w-9 h-9">
+              <ion-icon name="desktop-outline" class="w-8 h-8 transition-all hover:text-[#309543]"></ion-icon>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- featured project 02 -->
+      <div class="flex flex-col sm:flex-row sm:gap-12 mt-20 sm:mt-20">
+
+        <!-- right side -->
+        <div class="sm:w-1/2 h-[300px] flex flex-col justify-center">
+          <h2 class=" text-3xl font-bold mb-8 sm:relative sm:left-[10%] lg:left-1/4">02. Warung Mak Ni
+          </h2>
+          <p
+            class="bg-[#051830] pl-8 pr-2 py-4 mb-2 rounded shadow-sm sm:relative sm:left-[10%] lg:left-1/4 z-40 text-[#ffffff78]">
+            This is a simple online stall ordering website created using HTML5, Tailwind CSS, and JavaScript. <br>
+            <span class="text-[#309543] font-medium">This Site is Fully Responsive</span>
+          </p>
+          <div style="font-family: 'Roboto Mono', monospace;" class="sm:relative sm:left-[10%] lg:left-1/4">
+            <ul class="flex gap-4 justify-start text-sm">
+              <li>HTML5</li>
+              <li>JavaScript</li>
+              <li>Tailwind CSS</li>
+            </ul>
+          </div>
+          <div class="flex gap-4 mt-2 justify-start sm:relative sm:left-[10%] lg:left-1/4">
+            <a href="https://github.com/andri2299/warung-makNi" target="_blank" class="w-9 h-9">
+              <ion-icon name="logo-github" class="w-8 h-8 transition-all hover:text-[#309543]"></ion-icon>
+            </a>
+            <a href="https://github.com/andri2299/warung-makNi" target="_blank" class="w-9 h-9">
+              <ion-icon name="desktop-outline" class="w-8 h-8 transition-all hover:text-[#309543]"></ion-icon>
+            </a>
+          </div>
+        </div>
+
+        <!-- left side -->
+        <div class="mockup-window border border-base-300 sm:w-1/2 h-[300px]">
+          <div class="featured-project-img-01-div cursor-all-scroll overflow-scroll h-[300px] rounded">
+            <div class="featured-project-img-01  transition-all	duration-500  ">
+              <img src="./images/warung.png" alt="Warung Mak Ni" class="">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- featured project 03 -->
+      <div class="flex flex-col sm:flex-row sm:gap-12 mt-20 sm:mt-20">
+
+        <!-- left side -->
+        <div class="mockup-window border border-base-300 sm:w-1/2 h-[300px] order-2 sm:order-none	">
+          <div class="featured-project-img-01-div cursor-all-scroll overflow-scroll h-[300px] rounded">
+            <div class="featured-project-img-01  transition-all	duration-500  ">
+              <img src="./images/admin.png" alt="shopify clone">
+            </div>
+          </div>
+        </div>
+
+        <!-- right side -->
+        <div class="sm:w-1/2 h-[300px] flex flex-col justify-center">
+          <h2 class="sm:text-end text-3xl font-bold mb-8 sm:relative sm:right-[10%] lg:right-1/4">03. Data Admin
+          </h2>
+          <p
+            class="bg-[#051830] pl-8 pr-2 py-4 mb-2 rounded shadow-sm sm:relative sm:right-[10%] lg:right-1/4 text-[#ffffff78]">
+            This is a student data admin website created using PHP, HTML5, CSS, and JavaScript. <br>
+            <span class="text-[#309543] font-medium">This Site is Fully Responsive</span>
+          </p>
+          <div style="font-family: 'Roboto Mono', monospace;" class="sm:relative sm:right-[10%] lg:right-1/4">
+            <ul class="flex gap-4 sm:justify-end text-sm">
+              <li>PHP</li>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+            </ul>
+          </div>
+          <div class="flex gap-4 mt-2 sm:justify-end sm:relative sm:right-[10%] lg:right-1/4">
+            <a href="https://github.com/andri2299/les-online" target="_blank" class="w-9 h-9">
+              <ion-icon name="logo-github" class="w-8 h-8 transition-all hover:text-[#309543]"></ion-icon>
+            </a>
+            <a href="" target="_blank" class="w-9 h-9">
+              <ion-icon name="desktop-outline" class="w-8 h-8 transition-all hover:text-[#309543]"></ion-icon>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- featured project 04 -->
+      <div class="flex flex-col sm:flex-row sm:gap-12 mt-20 sm:mt-20">
+
+        <!-- right side -->
+        <div class="sm:w-1/2 h-[300px] flex flex-col justify-center">
+          <h2 class=" text-3xl font-bold mb-8 sm:relative sm:left-[10%] lg:left-1/4">04. Learn
+            Programming<br>from Home (les)</h2>
+          <p
+            class="bg-[#051830] pl-8 pr-2 py-4 mb-2 rounded shadow-sm sm:relative sm:left-[10%] lg:left-1/4 z-40 text-[#ffffff78]">
+            This is a website Study Programming from Home (LES) built using HTML5, Tailwind CSS, and JavaScript. <br>
+            <span class="text-[#309543] font-medium">This Site is Fully Responsive</span>
+          </p>
+          <div style="font-family: 'Roboto Mono', monospace;" class="sm:relative sm:left-[10%] lg:left-1/4">
+            <ul class="flex gap-4 justify-start text-sm">
+              <li>HTML</li>
+              <li>JavaScript</li>
+              <li>Tailwind CSS</li>
+            </ul>
+          </div>
+          <div class="flex gap-4 mt-2 justify-start sm:relative sm:left-[10%] lg:left-1/4">
+            <a href="https://github.com/andri2299/data-admin" target="_blank" class="w-9 h-9">
+              <ion-icon name="logo-github" class="w-8 h-8 transition-all hover:text-[#309543]"></ion-icon>
+            </a>
+            <a href="https://github.com/andri2299/data-admin" target="_blank" class="w-9 h-9">
+              <ion-icon name="desktop-outline" class="w-8 h-8 transition-all hover:text-[#309543]"></ion-icon>
+            </a>
+          </div>
+        </div>
+
+        <!-- left side -->
+        <div class="mockup-window border border-base-300 sm:w-1/2 h-[300px]">
+          <div class="featured-project-img-01-div cursor-all-scroll overflow-scroll h-[300px] rounded">
+            <div class="featured-project-img-01  transition-all	duration-500  ">
+              <img src="./images/les.png" alt="omnifood">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!--
+     <== Honorable Mentions ==>
+    <div class="mt-20">
+      <h2 class="text-center text-3xl font-semibold">Back-End Project</h2>
+      <== projects ==>
+      <div class=" px-5 py-24">
+        <div class="flex flex-wrap gap-y-4 -m-4">
+
+          <== project 10 ==>
+          <div class=" lg:w-1/3 sm:w-1/2 p-4 bg-[#051830]">
+            <div class="flex relative mentions-project rounded-md">
+              <img alt="developer-landing-page"
+                class="absolute inset-0 w-full h-full object-cover object-center rounded-md" src="./images/kalku.png">
+              <div class="px-8 py-10 relative z-10 w-full bg-[#051830] transition-all opacity-0 hover:opacity-95">
+                <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">HTML CSS PHP</h2>
+                <h1 class="title-font text-lg font-medium text-white mb-3">Simple Calculatore</h1>
+                <p class="leading-relaxed">
+                  This is an assignment given in the "Web programming course", created using HTML5, CSS3, and PHP.
+                </p>
+                <div class="flex gap-4 mt-2 justify-start">
+                  <a href="" target="_blank" class="w-9 h-9">
+                    <ion-icon name="logo-github" class="w-8 h-8 transition-all hover:text-[#309543]"></ion-icon>
+                  </a>
+                  <a href="" target="_blank" class="w-9 h-9">
+                    <ion-icon name="desktop-outline" class="w-8 h-8 transition-all hover:text-[#309543]"></ion-icon>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+  </section>
+
+
+  <!-- ****************************************** -->
+  <!-- Blogs Section -->
+  <!-- ****************************************** -->
+
+  <section class="bg-[#021227] px-7 sm:px-14 py-16 max-w-screen-xl mx-auto" id="blogs">
+    <!-- Title -->
+    <div class="flex justify-center items-center gap-12 pb-16 relative z-10">
+      <div class="h-px flex-1 bg-gradient-to-r from-transparent via-[#309543] to-transparent hidden sm:block"></div>
+      <h2
+        class="text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-[#309543] to-blue-500 drop-shadow-glow pb-2">
+        Blogs</h2>
+      <div class="h-px flex-1 bg-gradient-to-r from-transparent via-[#309543] to-transparent hidden sm:block"></div>
+    </div>
+
+
+    <div class="flex justify-center gap-1 flex-wrap lg:justify-between">
+      <!-- blog 1 -->
+      <div
+        class="max-w-xs mx-auto mt-4 bg-[#021227] rounded-lg border border-gray-800 shadow-md hover:shadow-lg transition-shadow duration-300">
+        <a href="./images/iot.pdf" target="_blank" rel="noopener noreferrer">
+          <div class="relative">
+            <img src="./images/iotp.png" alt="IoT Presentation Cover" class="rounded-t-lg w-full object-cover h-70">
+            <div
+              class="absolute top-0 right-0 bg-[#309543] text-white px-2 py-1 m-1.5 text-xs font-semibold rounded-full shadow">
+              PDF
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-3">
+              <h5 class="text-base font-bold tracking-tight text-white drop-shadow-md leading-tight">
+                Internet of Things (IoT) Training
+              </h5>
+            </div>
+          </div>
+        </a>
+        <div class="p-4">
+          <a href="./images/iot.pdf" target="_blank" rel="noopener noreferrer">
+            <h5
+              class="mb-2 text-lg font-bold tracking-tight text-white hover:text-[#309543] transition-colors line-clamp-2">
+              Internet of Things (IoT) Training
+            </h5>
+          </a>
+          <p style="font-family: 'Roboto', monospace;"
+            class="mb-3 font-normal text-gray-400 text-xs leading-relaxed line-clamp-3">
+            Internet of Things (IoT) training held on 24-25 December 2022 by the Information Systems Study Program,
+            Faculty of Engineering, Nusantara University PGRI Kediri.
+          </p>
+          <div class="flex items-center justify-between text-xs">
+            <a href="./images/iot.pdf"
+              class="inline-flex items-center font-medium text-[#309543] hover:text-white transition-colors group"
+              target="_blank" rel="noopener noreferrer">
+              Read more
+              <svg aria-hidden="true" class="ml-1 w-3 h-3 transition-transform transform group-hover:translate-x-1"
+                fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                  clip-rule="evenodd"></path>
+              </svg>
+            </a>
+            <span class="text-gray-500">5 min read</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- blog 2 -->
+      <div
+        class="max-w-xs mx-auto mt-4 bg-[#021227] rounded-lg border border-gray-800 shadow-md hover:shadow-lg transition-shadow duration-300">
+        <a href="./images/canva.pdf" target="_blank" rel="noopener noreferrer">
+          <div class="relative">
+            <img src="./images/canvap.png" alt="Canva Workshop Entertainment Division" class="rounded-t-lg w-full object-cover h-70">
+            <div
+              class="absolute top-0 right-0 bg-[#309543] text-white px-2 py-1 m-1.5 text-xs font-semibold rounded-full shadow">
+              PDF
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-3">
+              <h5 class="text-base font-bold tracking-tight text-white drop-shadow-md leading-tight">
+                Canva Workshop Entertainment Division
+              </h5>
+            </div>
+          </div>
+        </a>
+        <div class="p-4">
+          <a href="./images/canva.pdf" target="_blank" rel="noopener noreferrer">
+            <h5
+              class="mb-2 text-lg font-bold tracking-tight text-white hover:text-[#309543] transition-colors line-clamp-2">
+              Canva Workshop Entertainment Division
+            </h5>
+          </a>
+          <p style="font-family: 'Roboto', monospace;"
+            class="mb-3 font-normal text-gray-400 text-xs leading-relaxed line-clamp-3">
+            FIB Entertainment Division Canva Workshop "CARAKA" on April 27 2024 with the theme "Building a Creative
+            Spirit by Utilizing Canva as a Practical and Effective Design Media".
+          </p>
+          <div class="flex items-center justify-between text-xs">
+            <a href="./images/canva.pdf"
+              class="inline-flex items-center font-medium text-[#309543] hover:text-white transition-colors group"
+              target="_blank" rel="noopener noreferrer">
+              Read more
+              <svg aria-hidden="true" class="ml-1 w-3 h-3 transition-transform transform group-hover:translate-x-1"
+                fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                  clip-rule="evenodd"></path>
+              </svg>
+            </a>
+            <span class="text-gray-500">5 min read</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- blog 3 -->
+      <div
+        class="max-w-xs mx-auto mt-4 bg-[#021227] rounded-lg border border-gray-800 shadow-md hover:shadow-lg transition-shadow duration-300">
+        <a href="./images/ai.pdf" target="_blank" rel="noopener noreferrer">
+          <div class="relative">
+            <img src="./images/aip.png" alt="Guest Lecture on AI Development" class="rounded-t-lg w-full object-cover h-70">
+            <div
+              class="absolute top-0 right-0 bg-[#309543] text-white px-2 py-1 m-1.5 text-xs font-semibold rounded-full shadow">
+              PDF
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-3">
+              <h5 class="text-base font-bold tracking-tight text-white drop-shadow-md leading-tight">
+                Guest Lecture on AI Development
+              </h5>
+            </div>
+          </div>
+        </a>
+        <div class="p-4">
+          <a href="./images/ai.pdf" target="_blank" rel="noopener noreferrer">
+            <h5
+              class="mb-2 text-lg font-bold tracking-tight text-white hover:text-[#309543] transition-colors line-clamp-2">
+              Guest Lecture on AI Development
+            </h5>
+          </a>
+          <p style="font-family: 'Roboto', monospace;"
+            class="mb-3 font-normal text-gray-400 text-xs leading-relaxed line-clamp-3">
+            Guest lecture with the theme: "AI Development" held on October 15 2023 by the Information Systems Study
+            Program - Faculty of Computer Science. Engineering - Nusantara University PGRI Kediri.
+          </p>
+          <div class="flex items-center justify-between text-xs">
+            <a href="./images/ai.pdf"
+              class="inline-flex items-center font-medium text-[#309543] hover:text-white transition-colors group"
+              target="_blank" rel="noopener noreferrer">
+              Read more
+              <svg aria-hidden="true" class="ml-1 w-3 h-3 transition-transform transform group-hover:translate-x-1"
+                fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                  clip-rule="evenodd"></path>
+              </svg>
+            </a>
+            <span class="text-gray-500">5 min read</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- more blogs -->
+    <div class="text-end">
+      <a href="./images/fullser.pdf"
+        class="inline-flex items-center pt-2 md:pr-[120px] lg:pr-0 text-xl font-medium text-center text-[#309543] transition-all hover:text-[#30954232]"
+        target="_blank" rel="noopener noreferrer">
+        More Blogs
+        <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
+          xmlns="./images/fullser.pdf">
+          <path fill-rule="evenodd"
+            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+            clip-rule="evenodd"></path>
+        </svg>
+      </a>
+    </div>
+
+  </section>
+
+  <!-- ****************************************** -->
+  <!-- Call To Action Section -->
+  <!-- ****************************************** -->
+  <section class="bg-gradient-to-br from-[#021227] to-[#032a50] px-8 sm:px-16 py-20 max-w-screen-xl mx-auto"
+    id="contact">
+    <div class="relative">
+      <!-- Title -->
+      <div class="flex justify-center items-center gap-12 pb-16 relative z-10">
+        <div class="h-px flex-1 bg-gradient-to-r from-transparent via-[#309543] to-transparent hidden sm:block"></div>
+        <h2
+          class="text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-[#309543] to-blue-500 drop-shadow-glow">
+          Contact</h2>
+        <div class="h-px flex-1 bg-gradient-to-r from-transparent via-[#309543] to-transparent hidden sm:block"></div>
+      </div>
+
+      <div class="max-w-4xl mx-auto flex flex-col md:flex-row gap-6 items-stretch p-4">
+        <!-- Left Section: About Us -->
+        <div
+          class="md:w-1/3 p-5 rounded-xl bg-[#334155] shadow-xl flex flex-col justify-between relative overflow-hidden">
+          <div class="absolute inset-0 bg-gradient-to-br from-[#3b82f6] to-[#06b6d4] opacity-50 z-0"></div>
+          <div
+            class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1579546929518-9e396f3cc809')] bg-cover bg-center mix-blend-overlay opacity-30">
+          </div>
+          <div class="relative z-10">
+            <h2
+              class="text-2xl font-bold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-[#f0f9ff] to-[#cffafe]">
+              <img src="./images/logweb.png" alt="hero-img" width="100"></h2>
+            <p class="text-xs leading-relaxed text-gray-100">
+              "Keep up with my latest projects! to see the newest additions to my portfolio, get exclusive insights, and be the first to know about upcoming events and announcements. Stay inspired and connected with me!"
+            </p>
+          </div>
+          <div class="mt-auto relative z-10">
+            <p class="text-[10px] mt-4 text-gray-300">
+              Sanggrahan,Gondang, Nganjuk<br>
+            </p>
+          </div>
+          <div class="absolute -bottom-12 -right-12 w-32 h-32 bg-white opacity-10 rounded-full"></div>
+        </div>
+
+        <!-- Right Section: Contact Form -->
+        <div class="md:w-2/3 glassmorphism rounded-xl p-6 shadow-xl relative overflow-hidden">
+          <div class="absolute inset-0 bg-gradient-to-br from-[#4f46e5] to-[#10b981] opacity-30 z-0"></div>
+          <div class="relative z-10">
+            <h2
+              class="text-2xl font-bold mb-4 text-center text-transparent bg-clip-text bg-gradient-to-r from-[#e0f2fe] to-[#bae6fd]">
+              Contact us</h2>
+            <form id="contactForm" class="space-y-4">
+              <div class="grid grid-cols-2 gap-4">
+                <input type="text" placeholder="Name"
+                  class="w-full px-3 py-2 text-xs bg-white bg-opacity-20 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:border-transparent text-white placeholder-gray-300">
+                <input type="email" placeholder="E-mail"
+                  class="w-full px-3 py-2 text-xs bg-white bg-opacity-20 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:border-transparent text-white placeholder-gray-300">
+              </div>
+              <input type="text" placeholder="Subject"
+                class="w-full px-3 py-2 text-xs bg-white bg-opacity-20 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:border-transparent text-white placeholder-gray-300">
+              <textarea placeholder="Message..." rows="4"
+                class="w-full px-3 py-2 text-xs bg-white bg-opacity-20 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#22d3ee] focus:border-transparent text-white placeholder-gray-300 resize-none"></textarea>
+              <button type="submit"
+                class="w-full bg-gradient-to-r from-[#3b82f6] to-[#22d3ee] text-white py-2.5 rounded-lg text-sm font-semibold hover:from-[#2563eb] hover:to-[#0891b2] transition-all duration-300 shadow-lg transform hover:scale-105 flex items-center justify-center">
+                <span>Send Message</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2 animate-pulse" fill="none"
+                  viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </form>
+          </div>
+          <div class="absolute -bottom-16 -left-16 w-48 h-48 bg-white opacity-10 rounded-full blur-2xl"></div>
+        </div>
+      </div>
+
+
+      <!-- Social Media Icons -->
+      <div class="mt-8 flex justify-center">
+        <ul class="flex gap-4">
+          <li class="flex justify-center items-center">
+            <a href="mailto:mochandrisetiawan2@gmail.com" target="_blank"
+              class="w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center transition-all duration-300 hover:bg-teal-500 hover:text-white transform hover:scale-110">
+              <ion-icon name="mail" class="w-5 h-5"></ion-icon>
+            </a>
+          </li>
+          <li class="flex justify-center items-center">
+            <a href="" target="_blank"
+              class="w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center transition-all duration-300 hover:bg-blue-600 hover:text-white transform hover:scale-110">
+              <ion-icon name="logo-linkedin" class="w-5 h-5"></ion-icon>
+            </a>
+          </li>
+          <li class="flex justify-center items-center">
+            <a href="https://github.com/andri2299" target="_blank"
+              class="w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center transition-all duration-300 hover:bg-gray-800 hover:text-white transform hover:scale-110">
+              <ion-icon name="logo-github" class="w-5 h-5"></ion-icon>
+            </a>
+          </li>
+          <li class="flex justify-center items-center">
+            <a href="" target="_blank"
+              class="w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center transition-all duration-300 hover:bg-blue-400 hover:text-white transform hover:scale-110">
+              <ion-icon name="logo-twitter" class="w-5 h-5"></ion-icon>
+            </a>
+          </li>
+          <li class="flex justify-center items-center">
+            <a href="https://www.instagram.com/andrisetiawan2219/?hl=en" target="_blank"
+              class="w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center transition-all duration-300 hover:bg-pink-500 hover:text-white transform hover:scale-110">
+              <ion-icon name="logo-instagram" class="w-5 h-5"></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <script src="./Javascript/javascript.js"></script>
+</body>
+
+</html>
